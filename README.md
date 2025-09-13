@@ -18,7 +18,7 @@ and if they fall – the game restarts.
 - Don’t fall off the platforms!
 
 🎮 Play the game on Roblox:  
-👉 [Click here to play]((https://ro.blox.com/Ebh5?af_dp=roblox%3A%2F%2Fnavigation%2Fgame_details%3FgameId%3D7639358073&af_web_dp=https%3A%2F%2Fwww.roblox.com%2Fgames%2F88062952846613))
+👉 [Click here to play](https://ro.blox.com/Ebh5?af_dp=roblox%3A%2F%2Fnavigation%2Fgame_details%3FgameId%3D7639358073&af_web_dp=https%3A%2F%2Fwww.roblox.com%2Fgames%2F88062952846613)
 
 Future Ideas
 - Add power-ups
