@@ -1,6 +1,6 @@
 # Roblox Platform Runner
 
-![Preview](screen-roblox-first-game.png)
+![Preview](screen-roblox-first-game.jpg)
 
 A simple endless runner game in Roblox written in Lua.  
 The player runs on randomly generated platforms, collects coins,  
