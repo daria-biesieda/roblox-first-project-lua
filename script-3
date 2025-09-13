@@ -1,0 +1,10 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local coinCount = ReplicatedStorage:WaitForChild("CoinCount")
+
+local coin = Instance.new("Part")
+coin.Name = "Coin"
+-- все параметры монетки (цвет, размер, форма)
+coin.Parent = workspace
+
+coinCount.Value += 1
+
