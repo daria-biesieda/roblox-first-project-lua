@@ -1,0 +1,10 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local winEvent = ReplicatedStorage:WaitForChild("WinEvent")
+
+winEvent.OnClientEvent:Connect(function()
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = "You Win!",
+		Text = "You collected all the coins!",
+		Duration = 5
+	})
+end)
