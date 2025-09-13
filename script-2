@@ -1,0 +1,40 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+-- Проверяем, есть ли уже RemoteEvent, если нет — создаём
+local winEvent = ReplicatedStorage:FindFirstChild("WinEvent")
+if not winEvent then
+	winEvent = Instance.new("RemoteEvent")
+	winEvent.Name = "WinEvent"
+	winEvent.Parent = ReplicatedStorage
+end
+
+-- Считаем количество монет в Workspace при старте
+local function countCoins()
+	local count = 0
+	for _, obj in pairs(workspace:GetChildren()) do
+		if obj:IsA("Part") and obj.Name == "Coin" then
+			count += 1
+		end
+	end
+	return count
+end
+
+local totalCoins = countCoins()
+
+game.Players.PlayerAdded:Connect(function(player)
+	local leaderstats = Instance.new("Folder")
+	leaderstats.Name = "leaderstats"
+	leaderstats.Parent = player
+
+	local coins = Instance.new("IntValue")
+	coins.Name = "Coins"
+	coins.Parent = leaderstats
+
+	-- Следим за изменением количества монет у игрока
+	coins:GetPropertyChangedSignal("Value"):Connect(function()
+		if coins.Value >= totalCoins and totalCoins > 0 then
+			-- Победа!
+			winEvent:FireClient(player)
+		end
+	end)
+end)
